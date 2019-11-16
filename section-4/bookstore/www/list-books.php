@@ -35,6 +35,7 @@ $results = $db_connection->query($query);
         <th>GENRE</th>
         <th>PUBLISHER</th>
         <th>EDIT</th>
+        <th>DELETE</th>
       </tr>
     </thead>
 
@@ -51,7 +52,8 @@ $results = $db_connection->query($query);
       <td><?php echo $result['Genre'];   ?></td>
       <td><?php echo $result['Publisher'];   ?></td>
       <td><a href="edit.php?id=<?php echo $result['id']?>"><i class="far fa-edit"></i></a></td>
-
+      <td><a href="delete.php?id=<?php echo $result['id']?>"><i class="fas fa-trash-alt"></i></a></td>
+     
 
       <!-- <td><?php echo $result['id'];   ?></td> -->
       </tr>
