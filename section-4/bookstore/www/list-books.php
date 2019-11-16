@@ -33,9 +33,8 @@ $results = $db_connection->query($query);
         <th>TITLE</th>
         <th>AUTHOR</th>
         <th>GENRE</th>
-        <th>HEIGHT</th>
         <th>PUBLISHER</th>
-        <th>ID</th>
+        <th>EDIT</th>
       </tr>
     </thead>
 
@@ -50,9 +49,11 @@ $results = $db_connection->query($query);
       <td><?php echo $result['Title'];   ?></td>
       <td><?php echo $result['Author'];   ?></td>
       <td><?php echo $result['Genre'];   ?></td>
-      <td><?php echo $result['Height'];   ?></td>
       <td><?php echo $result['Publisher'];   ?></td>
-      <td><?php echo $result['id'];   ?></td>
+      <td><a href="edit.php?id=<?php echo $result['id']?>"><i class="far fa-edit"></i></a></td>
+
+
+      <!-- <td><?php echo $result['id'];   ?></td> -->
       </tr>
 
     <?php
